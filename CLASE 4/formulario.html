@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrias LMI- Formulario Cliente</title>
+</head>
+<body>
+    <h1>Solicitud de Presupuesto- Industrias LMI⚙️</h1>
+
+<form>
+        <ul>
+            <li>
+                Nombre o Razón social:
+                <input type="text" name="nombre">
+            </li>
+
+            <li>
+                Email:
+                <input type="email" name="email">
+            </li>
+
+            <li>
+                Teléfono:
+                <input type="tel" name="tel">
+            </li>
+
+            <li>
+                Seleccione los servicios solicitados:
+                <ul>
+                    <li>
+                        <input type="checkbox" name="servicio" value="laser">
+                        Corte láser
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="servicio" value="plegado">
+                        Plegado
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="servicio" value="soldadura">
+                        Soldadura
+                    </li>
+
+                    <li>
+                        <input type="checkbox" name="servicio" value="pintura">
+                        Pintura en polvo
+                    </li>
+                </ul>
+            </li>
+
+        <li>
+
+            Adjuntar plano:
+            <input type="file" name="plano">
+
+        </li>
+
+        <li>
+            Observaciones: 
+            <textarea name="observaciones" id=""></textarea>
+        </li>
+
+    </ul>
+
+    <input type="submit" value="Enviar Solicitud">
+
+</form>
+
+</body>
+</html>
