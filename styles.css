@@ -47,6 +47,7 @@ nav button {
     font-size: 12px;
     font-weight: 550;
     color: black;
+    white-space: nowrap;
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -87,12 +88,14 @@ nav button:hover {
 .header-PH {
     display: flex;
     gap: 10px;
+    margin-left: auto;
     
 }
 
 .header-PH button {
     border-radius: 20px;
     padding: 12px 20px;
+    white-space: nowrap;
 }
 
 .header-PH .btn-prueba {
@@ -110,7 +113,7 @@ nav button:hover {
 }
 
 .header-PH .btn-prueba:hover {
-background-color: rgba(0, 0, 0, 0.10);
+background-color:#40465c;
 
 }
 
@@ -185,7 +188,7 @@ background-color: rgba(0, 0, 0, 0.10);
 
 .hero-etiqueta {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 19.6px;
 }
 
@@ -217,6 +220,12 @@ background-color: rgba(0, 0, 0, 0.10);
     border: none;
     border-radius: 30px;
     padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-CDV:hover {
+    background-color: #d5d6dc;
 }
 
 
@@ -266,7 +275,7 @@ background-color: rgba(0, 0, 0, 0.10);
     flex-direction: column;
     flex: 1;
     padding: 0 14px;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
 }
 
 .contenido-tarjeta h3 {
@@ -289,13 +298,10 @@ background-color: rgba(0, 0, 0, 0.10);
     padding-left: 20px;
     margin-top: 0;
     margin-bottom: 0;
-    height: 150px;
+    min-height: 150px;
     box-sizing: border-box;
 }
 
-.contenido-tarjeta li {
-    margin-bottom: 0;
-}
 
 .tarjeta button {
     margin-top: auto;
@@ -324,12 +330,10 @@ header .contenedor {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 60px;
+    gap: 40px;
+    padding: 0;
 }
 
-.header-PH {
-    margin-left: auto;
-}
 
 footer .contenedor {
     display: flex;
@@ -364,12 +368,17 @@ footer .contenedor {
 .footer-idioma {
     background-color: #f1f1f1;
     border-radius: 30px;
-    ;
     gap: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-idioma:hover {
+    background-color:rgb(229, 231, 235);
 }
 
 .footer-idioma .LAT {
@@ -388,13 +397,14 @@ footer .contenedor {
 
 }
 
-@media screen and (max-width: 760px) {
-    
+
+@media screen and (max-width: 750px) {
+
     header {
-    margin-bottom: 40px;
-    padding: 16px 0;
+        margin-bottom: 40px;
+        padding: 16px 0;
     }
-    
+
     .header-PH {
         display: none;
     }
@@ -408,15 +418,16 @@ footer .contenedor {
     }
 
     .hero {
-        flex-direction: column;
+        align-items: flex-start;
     }
 
     .hero-texto {
-    margin-top: 0;
+        margin-top: 0;
     }
 
     .hero-texto h1 {
-        font-size: 32px;
+        font-size: 26px;
+        line-height: 1.2;
     }
 
     .hero-botones {
@@ -433,32 +444,43 @@ footer .contenedor {
         white-space: normal;
         text-align: center;
     }
+
     .tarjetas {
-    flex-direction: row;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
-.tarjeta {
-    width: 45%;
-    flex: none;
-    box-sizing: border-box;
-    }
-
-footer .contenedor {
-    flex-direction: column;
-    gap: 30px;
-}
-
-.ESA h2 {
-    font-size: 28px;
-}
-
-}
-
-@media screen and (max-width: 550px) {
     .tarjeta {
-        width: 100%;
+        flex: 0 0 calc(50% - 10px);
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .contenido-tarjeta ul {
+        height: auto;
+    }
+
+    footer .contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .ESA h2 {
+        font-size: 28px;
     }
 }
+
 
 @media screen and (max-width: 690px) {
     footer .contenedor {
@@ -466,3 +488,27 @@ footer .contenedor {
         gap: 30px;
     }
 }
+
+
+@media screen and (max-width: 565px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .tarjeta {
+        flex: 0 0 100%;
+    }
+
+    .footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    }
+}
+
+
+
+
