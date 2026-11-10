@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css");
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  
+}
+
+.padre {
+    height: 100vh;
+    background-color: rgb(16, 16, 15);
+  
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+.hijo {
+   width: 200px;
+   height: 300px;
+   border: 1px solid black;
+   border-radius: 10px;
+
+}
+
+.hijo-1 {
+   background-color: rgb(160, 160, 167);
+
+}
+
+.hijo-2 {
+
+   background-color: rgb(167, 157, 157);
+   position: fixed;
+   top: 80px;
+   left: 0px;
+   opacity: 5;
+
+}
+
+.hijo-3 {
+
+   background-color: grey;
+
+}
+
+header {
+
+   background-color:yellow;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+
+}
+
+search-form {
+
+width: 600px;
+position: relative;
+display: flex;
+align-items: center;
+
+}
+
+search-form input {
+
+width: 100%;
+border: none;
+padding: 10 40px;
+box-shadow: o px 1 px 3 px grey(0, 0, 0, 0.241);
+border-radius: 10 px;
+}
+
+.search-forma_btn{
+
+position: absolute;
+right: 16px;
+border: none;
+background-color: transparent;
+}
+
+.opciones {
+
+ width: 800px;
+ height: 50px;
+ border-radius: 10px;
+ background-color: goldenrod;
+ margin: 0 auto;
+ position: sticky;
+ top: 100;
+ z-index: 1000px;
+}
